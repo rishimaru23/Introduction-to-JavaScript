@@ -58,8 +58,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return( a * b)
   }
 
 
@@ -74,10 +74,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
-}
-
+function dogYears(age){ //invoking function and passing parameter age
+    return age * 7 //returning age times (dogyears)
+  }
+  console.log(dogYears(23))// console logging function w/ 23 as human age parameter
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,12 +108,34 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+    if (age >= 1){ //if conditional statement that clarifys that the dog is an adult. This allows us to proceed with the weight.
+        if (weight <= 5) { //if conditional statement that addresses weight.
+            return weight * .05;
+        }
+        else if (weight >= 6 && weight <= 10){
+          return weight * .04;
+        }
+        else if (weight >=11 && weight <=15){
+          return weight * .03;
+        }
+        else if (weight > 15) {
+        return weight * .02;
+        }
+    }
+    else if (age < 1){
+      if (age >= .16 && age <= .33){
+        return weight * .1;
+      }
+      else if (age >= .33 && age <= .583){
+        return weight * .05;
+      }
+      else if (age >= .583 && age <=1){
+       return weight * .04;
+      }
+    } 
   }
-
-
-
+  console.log(hungryDog(15,1));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
